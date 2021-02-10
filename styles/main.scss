@@ -1,16 +1,16 @@
 @import './variables';
 @import './normalize';
-@import './fonts.scss';
+@import './fonts';
 
 
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  font-family: sans-serif;
+  font-family: $font-base;
 }
 
 body {
-  font: normal normal normal 1rem sans-serif;
+  font: normal normal normal 1rem $font-base;
   overflow-x: hidden;
   background-color: #fffbf6;
   color: #fff;
