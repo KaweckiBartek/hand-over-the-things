@@ -1,0 +1,39 @@
+@import './variables';
+@import './normalize';
+@import './fonts.scss';
+
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+
+body {
+  font: normal normal normal 1rem sans-serif;
+  overflow-x: hidden;
+  background-color: #fffbf6;
+  color: #fff;
+}
+
+img, input[type="image"], video, embed, iframe, marquee, object, table {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  color: $c-black;
+  text-decoration: none;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+*{
+  box-sizing: border-box;
+}
