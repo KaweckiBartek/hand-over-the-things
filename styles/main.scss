@@ -2,6 +2,7 @@
 @import './normalize';
 @import './settings/fonts';
 @import './settings/colors';
+@import'./themes/theme.scss';
 
 
 html {
@@ -14,7 +15,7 @@ body {
   font: normal normal normal 1rem $font-base;
   overflow-x: hidden;
   background-color: #fffbf6;
-  color: $c-black;
+  color: $-c-gray;
 }
 
 img, input[type="image"], video, embed, iframe, marquee, object, table {
