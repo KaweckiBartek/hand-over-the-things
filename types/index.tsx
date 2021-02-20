@@ -16,5 +16,12 @@ export interface IColumn{
 }
 
 export interface IHeadingItem {
+  firstLine: string;
+  secondLine: string;
+}
 
+export interface IStep {
+  icon: string,
+  title: string;
+  description: string;
 }

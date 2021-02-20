@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import SharedComponents from "../components"
 
-const {HomeHeader, Columns} = SharedComponents
+const {HomeHeader, Columns, SimpleSteps} = SharedComponents
 
 export default function Home() {
   return (
@@ -12,6 +12,7 @@ export default function Home() {
       </Head>
       <HomeHeader />
       <Columns />
+      <SimpleSteps />
      
     </div>
   )

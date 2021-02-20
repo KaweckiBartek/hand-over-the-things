@@ -1,6 +1,7 @@
 import React from 'react'
+import { IHeadingItem } from '../../../types'
 
-const HeadingItem = ({ firstLine, secondLine }) => {
+const HeadingItem = ({ firstLine, secondLine } :IHeadingItem) => {
   return (
     <div className="heading-item">
       { secondLine === "" ?
