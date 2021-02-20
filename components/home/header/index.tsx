@@ -4,7 +4,7 @@ import WelcomeSection from "./WelcomeSection"
 
 const Header = () => {
   return (
-    <div className="home__header">
+    <header className="home__header">
       <div className="header_left">
 
       </div>
@@ -15,7 +15,7 @@ const Header = () => {
           <WelcomeSection />
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 

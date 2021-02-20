@@ -4,11 +4,13 @@ import dynamic from 'next/dynamic';
 // const PlatformNav = dynamic(() => import('./platform/platformNav'));
 
 const HomeHeader = dynamic(()=> import("../components/home/header"))
-const MainButton = dynamic(()=> import('../components/home/buttons/MainButton'))
+const MainButton = dynamic(() => import('../components/home/buttons/MainButton'))
+const Columns = dynamic(()=> import('../components/home/columns'))
 
 export const SharedComponents = {
  HomeHeader,
- MainButton,
+  MainButton,
+ Columns,
 };
 
 export default SharedComponents;

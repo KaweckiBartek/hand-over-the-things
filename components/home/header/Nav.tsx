@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from "next/link"
 import * as Scroll from 'react-scroll';
+import { INavItem } from '../../../types';
 // import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
-const NavItem = ({name}) => {
+const NavItem = ({name}: INavItem) => {
   return (
     <li className="nav__item">
       {name}

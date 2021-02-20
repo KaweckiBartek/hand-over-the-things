@@ -9,14 +9,13 @@ const WelcomeSection = () => {
       <h1 className="welcome-section__text">Zacznij Pomagać! <br />
       Oddaj niechciane rzeczy w zaufane ręce
       </h1>
-      {/* <div className="decoration" /> */}
+
       <img
+        className="decoration"
         src="/assets/Decoration.svg"
         alt="decoration"
-        className="decoration"
         width="253"
         height="33"
-
       />
 
       <div className="welcome-buttons">
