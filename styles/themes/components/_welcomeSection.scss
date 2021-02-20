@@ -1,0 +1,19 @@
+.welcome-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .welcome-section__text{
+    text-align: center;
+    font-size: 38px/55px;
+    letter-spacing: -0.76px;
+    font-weight: 500;
+
+  }
+
+
+  .welcome-buttons{
+    display: flex;
+  }
+}

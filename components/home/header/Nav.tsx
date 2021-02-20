@@ -1,90 +1,35 @@
 import React from 'react'
+import Link from "next/link"
 import * as Scroll from 'react-scroll';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+// import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
-const NavItem = () => {
+const NavItem = ({name}) => {
   return (
-    <li>
-
+    <li className="nav__item">
+      {name}
     </li>
   )
 }
 
 const Nav = () => {
 
+  const navItems = ['Start' ,'O co chodzi?', 'O nas', 'Fundacja i organizacje', 'Kontakt']
+
   return (
     <nav className="home__nav">
       <div className="nav__log-reg">
-        <button>Zaloguj</button>
-        <button>Załóż konto</button>
+        <Link href="/logowanie">
+        <a>Zaloguj</a>
+        </Link>
+        <Link href="/rejestracja">
+        <a>Załóż konto</a>
+        </Link>
+        
       </div>
 
-      <div className="nav__navigation">
-        <button>O co chodzi?</button>
-        <button>O nas</button>
-        <button>Fundacja i organizacje</button>
-        <button>Kontakt</button>
-        {/* <Link activeClass="active"  
-          to="start"
-          spy={true}
-          smooth={true}
-          hashSpy={true}
-          offset={50}
-          duration={500}
-          delay={1000}
-          isDynamic={true}
-          // onSetActive={this.handleSetActive}
-          // onSetInactive={this.handleSetInactive}
-          ignoreCancelEvents={false}
-        >
-          Start
-        </Link>
-        <Link activeClass="active"  
-          to="start"
-          spy={true}
-          smooth={true}
-          hashSpy={true}
-          offset={50}
-          duration={500}
-          delay={1000}
-          isDynamic={true}
-          // onSetActive={this.handleSetActive}
-          // onSetInactive={this.handleSetInactive}
-          ignoreCancelEvents={false}
-        >
-          Start
-        </Link>
-        <Link activeClass="active"  
-          to="start"
-          spy={true}
-          smooth={true}
-          hashSpy={true}
-          offset={50}
-          duration={500}
-          delay={1000}
-          isDynamic={true}
-          // onSetActive={this.handleSetActive}
-          // onSetInactive={this.handleSetInactive}
-          ignoreCancelEvents={false}
-        >
-          Start
-        </Link>
-        <Link activeClass="active"  
-          to="start"
-          spy={true}
-          smooth={true}
-          hashSpy={true}
-          offset={50}
-          duration={500}
-          delay={1000}
-          isDynamic={true}
-          // onSetActive={this.handleSetActive}
-          // onSetInactive={this.handleSetInactive}
-          ignoreCancelEvents={false}
-        >
-          Start
-        </Link> */}
-      </div>
+      <ul className="nav__navigation">
+        {navItems.map((navItem) => <NavItem name={navItem} key={navItem} />)}
+      </ul>
     </nav>
   )
 }
