@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from './Nav'
-import WelcomeSection from "./WelcomeSection"
+import Banner from "./Banner"
 
 const Header = () => {
   return (
@@ -12,7 +12,7 @@ const Header = () => {
         <Nav />
 
         <div className="welcome-section-wrapper">
-          <WelcomeSection />
+          <Banner />
         </div>
       </div>
     </header>

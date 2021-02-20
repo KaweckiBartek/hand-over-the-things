@@ -5,7 +5,7 @@ const HeadingItem = ({ firstLine, secondLine } :IHeadingItem) => {
   return (
     <div className="heading-item">
       { secondLine === "" ?
-        <h1>{firstLine}</h1>
+        <h1 className="heading__text">{firstLine}</h1>
         :
         <h1 className="heading__text">
           {firstLine}

@@ -3,6 +3,11 @@
   margin: 22px;
   background-color: white;
   text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover{
+    transform: scale(1.05);
+  }
 }
 
 .main-button-big{

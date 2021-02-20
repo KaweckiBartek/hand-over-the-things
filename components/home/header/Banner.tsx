@@ -3,12 +3,12 @@ import SharedComponents from '../../index'
 
 const { MainButton, HeadingItem } = SharedComponents;
 
-const WelcomeSection = () => {
+const Banner = () => {
   return (
-    <div className="welcome-section">
+    <div className="banner">
       <HeadingItem firstLine="Zacznij pomagać!" secondLine="Oddaj niechciane rzeczy w zaufane ręce"/>
 
-      <div className="welcome-buttons">
+      <div className="banner-buttons">
         <MainButton size="big" text="ODDAJ RZECZY" />
         <MainButton size="big" text="ZORGANIZUJ ZBIÓRKĘ" />
       </div>
@@ -16,4 +16,4 @@ const WelcomeSection = () => {
   )
 }
 
-export default WelcomeSection
+export default Banner
