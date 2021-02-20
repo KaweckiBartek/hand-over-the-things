@@ -14,3 +14,7 @@ export interface IColumn{
   title: string,
   description: string,
 }
+
+export interface IHeadingItem {
+
+}
