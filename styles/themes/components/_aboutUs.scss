@@ -1,0 +1,35 @@
+.aboutUs {
+  display: flex;
+  height: 925px;
+  width: 100%;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 185px 10px;
+    background-color: $c-white;
+    width: 50%;
+    height: 100%;
+
+    h3 {
+      max-width: 657px;
+      text-align: center;
+      font: normal normal normal 30px/54px $font-base;
+      letter-spacing: -0.6px;
+    }
+
+    &__signature {
+      margin-left: 400px;
+      margin-top: 10px;
+      width: 209px;
+      height: 149px;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    height: 100%;
+  }
+}
