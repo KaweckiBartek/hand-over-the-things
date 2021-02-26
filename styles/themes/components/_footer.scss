@@ -1,0 +1,30 @@
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+
+  &__copyright {
+    font: normal normal normal 18px/24px $font-base;
+    letter-spacing: 0px;
+  }
+
+  &__icons{
+    position: absolute;
+    height: 30px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 20px;
+    right: 10%;
+  }
+
+  &__icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+}

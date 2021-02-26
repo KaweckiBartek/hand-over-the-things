@@ -2,8 +2,10 @@ import React from 'react'
 
 const ContactUs = () => {
   return (
-    <div>
-      
+    <div className="contactUs">
+      <div className="contactUs__from">
+
+      </div>
     </div>
   )
 }

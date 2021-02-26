@@ -8,7 +8,9 @@ const Columns = dynamic(() => import('./home/columns'))
 const HeadingItem = dynamic(() => import('./home/headingItem'))
 const SimpleSteps = dynamic(() => import('./home/simpleSteps'))
 const AboutUs = dynamic(() => import('./home/aboutUs'))
-const WhoWeHelp = dynamic(()=> import('./home/whoWeHelp'))
+const WhoWeHelp = dynamic(() => import('./home/whoWeHelp'))
+const ContactUs = dynamic(() => import('./home/contactUs'))
+const Footer = dynamic(()=> import('./home/footer'))
 
 export const SharedComponents = {
   HomeHeader,
@@ -18,6 +20,8 @@ export const SharedComponents = {
   SimpleSteps,
   AboutUs,
   WhoWeHelp,
+  ContactUs,
+  Footer,
 };
 
 export default SharedComponents;
