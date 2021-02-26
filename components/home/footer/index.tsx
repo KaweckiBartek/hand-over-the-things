@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
@@ -7,20 +8,24 @@ const Footer = () => {
 
       <div className="footer__icons">
 
+        <Link href="">
         <img
           src="assets/Instagram.svg"
           alt="instagram icon"
           className="footer__icon"
           width={30}
           height={30}
-        />
+          />
+        </Link>
+        <Link href="https://www.instagram.com/bartkawecky/">
         <img
           src="assets/Facebook.svg"
           alt="facebook icon"
           className="footer__icon"
           width={30}
           height={30}
-        />
+          />
+          </Link>
       </div>
     </div>
   )
