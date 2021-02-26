@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic';
 
 // Shared across multiple subpages
-// const PlatformNav = dynamic(() => import('./platform/platformNav'));
 
 const HomeHeader = dynamic(() => import("./home/header"))
 const MainButton = dynamic(() => import('./home/buttons/MainButton'))
