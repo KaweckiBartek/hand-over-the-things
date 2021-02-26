@@ -5,6 +5,7 @@ const InstitutionItem = ({ name, mision, description, index }: IInstitutionItem)
   return (
     <li 
       className="institutionItem"
+      style={{borderBottom: ((index + 1) % 3 === 0) ? "1px solid transparent" : "1px solid #707070"}}
     >
       <div className="institutionItem__left">
         <p className="institutionItem__left__name">{name}</p>
