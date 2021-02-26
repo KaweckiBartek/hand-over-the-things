@@ -34,11 +34,6 @@ export const fundations = [
     mision: `Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.`,
     description: `ubrania, jedzenie, ciepłe koce`
   },
-  {
-    name: ``,
-    mision: ``,
-    description: ``
-  },
 ]
 
 export const nonGovermentOrganisations = [
@@ -72,11 +67,6 @@ export const nonGovermentOrganisations = [
     mision: `Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.`,
     description: `ubrania, jedzenie, ciepłe koce`
   },
-  {
-    name: ``,
-    mision: ``,
-    description: ``
-  },
 ]
 export const localCollections = [
   {
@@ -93,10 +83,5 @@ export const localCollections = [
     name: `Fundacja “Bez domu”`,
     mision: `Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.`,
     description: `ubrania, jedzenie, ciepłe koce`
-  },
-  {
-    name: ``,
-    mision: ``,
-    description: ``
   },
 ]

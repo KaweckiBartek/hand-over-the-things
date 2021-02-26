@@ -25,15 +25,16 @@ const WhoWeHelp = () => {
   const [ institution, setInstitution ] = useState(fundations)
 
   const pagesNumbers = Math.ceil(institution.length / 3)
+  const pagesCounters = [];
+  const numbersOfPages = Math.ceil(institution.length / 3);
+  for (let i = 0; i < numbersOfPages; i++) {
+    pagesCounters.push(<PageCounter {...{ setEnd, setStart, i }} />)
+  }
 
- 
-    const pagesCounters = [];
-    const numbersOfPages = Math.ceil(institution.length / 3);
-    for (let i = 0; i < numbersOfPages; i++){
-      pagesCounters.push(<PageCounter {...{setEnd, setStart, i}} />)
-    }
-    
-
+  useEffect(() => {
+  setStart(0)
+  setEnd(3)
+},[institution])
 
   return (
     <div className="whoWeHelp">
