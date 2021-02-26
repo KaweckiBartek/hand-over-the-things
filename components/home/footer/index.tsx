@@ -8,24 +8,24 @@ const Footer = () => {
 
       <div className="footer__icons">
 
-        <Link href="">
-        <img
-          src="assets/Instagram.svg"
-          alt="instagram icon"
-          className="footer__icon"
-          width={30}
-          height={30}
+        <Link href="https://www.facebook.com/kawec1/">
+          <img
+            src="assets/Instagram.svg"
+            alt="instagram icon"
+            className="footer__icon"
+            width={30}
+            height={30}
           />
         </Link>
         <Link href="https://www.instagram.com/bartkawecky/">
-        <img
-          src="assets/Facebook.svg"
-          alt="facebook icon"
-          className="footer__icon"
-          width={30}
-          height={30}
+          <img
+            src="assets/Facebook.svg"
+            alt="facebook icon"
+            className="footer__icon"
+            width={30}
+            height={30}
           />
-          </Link>
+        </Link>
       </div>
     </div>
   )
