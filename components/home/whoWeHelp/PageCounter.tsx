@@ -7,7 +7,7 @@ const PageCounter = ({ i, setStart, setEnd }) => {
     setEnd((i*3) + 3)
   }
   return (
-    <li onClick={handleClick} className="pageCounter">{i + 1}</li>
+    <button onClick={handleClick} className="pageCounter">{i + 1}</button>
   )
 }
 

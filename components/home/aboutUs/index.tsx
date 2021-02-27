@@ -5,7 +5,7 @@ const { HeadingItem } = SharedComponents;
 
 const AboutUs = () => {
   return (
-    <div className="aboutUs">
+    <div className="aboutUs" id="AboutUs">
       <div className="aboutUs__left">
         <HeadingItem firstLine="O nas" secondLine="" />
 

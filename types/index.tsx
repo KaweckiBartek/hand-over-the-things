@@ -1,7 +1,12 @@
 import React from 'react'
 
-export interface INavItem {
+export interface IHomeNavItem{
   name: string;
+  navLink: string;
+}
+
+export interface IHelpNavItem {
+  name: string,
   onClick: {name: string, mision: string, description: string} [],
   setInstitution: (arg: { name: string, mision: string, description: string }[]) => void;
 }

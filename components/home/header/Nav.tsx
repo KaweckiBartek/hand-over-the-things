@@ -1,14 +1,20 @@
 import React from 'react'
 import Link from "next/link"
-import * as Scroll from 'react-scroll';
-import { INavItem } from '../../../types';
-// import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { IHomeNavItem } from '../../../types';
 
-const NavItem = ({name}: INavItem) => {
+const HomeNavItem = ({ name, navLink }: IHomeNavItem) => {
+
+  navLink==="Start" ? navLink = "/#Start" : navLink
+  navLink==="O co chodzi?" ? navLink = "/#SimpleSteps" : navLink
+  navLink==='O nas' ? navLink =  "/#AboutUs" : navLink
+  navLink==='Fundacja i organizacje' ? navLink =  "/#Institutions" : navLink
+  navLink==='Kontakt' ? navLink =  "/#Contact" : navLink
   return (
+    <Link href={navLink}>
     <li className="nav__item">
       {name}
     </li>
+    </Link>
   )
 }
 
@@ -29,7 +35,7 @@ const Nav = () => {
       </div>
 
       <ul className="nav__navigation">
-        {navItems.map((navItem) => <NavItem name={navItem} key={navItem} />)}
+        {navItems.map((navItem) => <HomeNavItem name={navItem} navLink={navItem} key={navItem} />)}
       </ul>
     </nav>
   )

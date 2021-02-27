@@ -4,7 +4,7 @@ import Banner from "./Banner"
 
 const Header = () => {
   return (
-    <header className="home__header">
+    <header className="home__header" id="Start">
       <div className="header_left">
 
       </div>

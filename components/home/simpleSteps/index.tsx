@@ -29,7 +29,7 @@ const SimpleSteps = () => {
   ]
 
   return (
-    <div className="simpleSteps">
+    <div className="simpleSteps" id="SimpleSteps">
       <header className="simpleSteps__header">
         <HeadingItem firstLine="Wystarczą 4 proste kroki" secondLine="" />
       </header>

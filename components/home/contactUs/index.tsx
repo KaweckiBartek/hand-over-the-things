@@ -27,7 +27,7 @@ const ContactUs = () => {
   return (
     <div className="contactUs__background">
       <div className="contactUs__background-shadow">
-        <div className="contactUs">
+        <div className="contactUs" id="Contact">
           <HeadingItem firstLine="Skontaktuj się z nami" secondLine="" />
           <form
             onSubmit={handleSubmit}

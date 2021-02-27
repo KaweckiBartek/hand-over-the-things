@@ -1,57 +1,44 @@
 import React, { useEffect, useState } from 'react'
-import { INavItem } from '../../../types';
+import { IHelpNavItem } from '../../../types';
 import SharedComponents from '../../index'
 import InstitutionItem from './InstitutionItem';
-import { fundations, nonGovermentOrganisations, localCollections } from '../../../data'
 import PageCounter from './PageCounter';
+import HelpNavItem from './HelpNavItem';
+import { fundations, nonGovermentOrganisations, localCollections } from '../../../data'
 
 const { HeadingItem } = SharedComponents;
-
-export const NavItem = ({ name, onClick, setInstitution }: INavItem) => {
-  return (
-    <li
-      onClick={() => setInstitution(onClick)}
-      className="whoWeHelp__item"
-    >
-      {name}
-    </li>
-  )
-}
-
 
 const WhoWeHelp = () => {
   const [ start, setStart ] = useState(0);
   const [ end, setEnd ] = useState(3);
   const [ institution, setInstitution ] = useState(fundations)
-
   const pagesNumbers = Math.ceil(institution.length / 3)
- 
   const pagesCounters = [];
   const numbersOfPages = Math.ceil(institution.length / 3);
   for (let i = 0; i < numbersOfPages; i++) {
-    pagesCounters.push(<PageCounter {...{ setEnd, setStart, i, key:i }} />)
+    pagesCounters.push(<PageCounter {...{ setEnd, setStart, i, key: i }} />)
   }
 
   useEffect(() => {
-  setStart(0)
-  setEnd(3)
-},[institution])
+    setStart(0)
+    setEnd(3)
+  }, [ institution ])
 
   return (
-    <div className="whoWeHelp">
+    <div className="whoWeHelp" id="Institutions">
       <HeadingItem firstLine="Komu pomagamy?" secondLine="" />
       <div className="whoWeHelp__institutions">
-        <NavItem
+        <HelpNavItem
           {...{ setInstitution }}
           onClick={fundations}
           name="Fundacjom"
         />
-        <NavItem
+        <HelpNavItem
           {...{ setInstitution }}
           onClick={nonGovermentOrganisations}
           name="Organizacjom pozarządowym"
         />
-        <NavItem
+        <HelpNavItem
           {...{ setInstitution }}
           onClick={localCollections}
           name="Lokalnym zbiórkom"
@@ -59,7 +46,11 @@ const WhoWeHelp = () => {
       </div>
 
       <section className="whoWeHelp__institutions__section">
-        <p className="whoWeHelp__institutions__descriptions">W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+        {institution === fundations && <p className="whoWeHelp__institutions__descriptions">W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>}
+
+        {institution === nonGovermentOrganisations && <p className="whoWeHelp__institutions__descriptions">nonGovermentOrganisations - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>}
+
+        {institution === localCollections && <p className="whoWeHelp__institutions__descriptions">localCollections - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>}
 
         <ul className="institutions__list">
           {institution.slice(start, end).map((fundation, key) => {
@@ -71,9 +62,10 @@ const WhoWeHelp = () => {
           })}
         </ul>
       </section>
-      <ul className="institutions__pages">
+      
+      <div className="institutions__pages">
         {pagesCounters}
-      </ul>
+      </div>
     </div>
   )
 }
