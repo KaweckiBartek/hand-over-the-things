@@ -5,17 +5,22 @@ import SharedComponents from '../../index'
 const { HeadingItem } = SharedComponents;
 
 const SignIn = () => {
-  const { register, handleSubmit, watch, errors } = useForm()
+  const { register, handleSubmit, errors } = useForm()
   const [ email, setEmail ] = useState('')
   const [ password, setPassword ] = useState('')
   const [ rptPassword, setRptPassword ] = useState('')
+  const [pwdEqual, setPwdEqual] = useState(true);
   const [ registerData, setLogInData ] = useState({
     email: "",
     password: "",
     rptPassword: "",
   })
 
-  const onSubmit = () => {
+  const onSubmit = (data: any) => {
+    if (data.pwd !== data.repeatPwd) {
+      setPwdEqual(false);
+      return;
+    }
     setLogInData({
       email,
       password,
@@ -49,6 +54,11 @@ const SignIn = () => {
               onChange={(e) => setEmail(e.target.value)}
               type="text"
             />
+            {errors.email && (
+              <p className="form-error ">
+                Wprowadź poprawny adres email
+              </p>
+            )}
           </label>
 
           <label
@@ -59,7 +69,7 @@ const SignIn = () => {
             <input
               ref={register({
                 required: true,
-                pattern: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
+                pattern: /(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
               })}
               name="password"
               className="form__input"
@@ -68,16 +78,21 @@ const SignIn = () => {
               type="text"
               onChange={(e) => setPassword(e.target.value)}
             />
+            {errors.email && (
+              <p className="form-error ">
+                To pole jest wymagane. Upewnij się, że posiada minimum 1 cyfrę, 1 duża literę i małą oraz znak specjalny spośród: @ $ !% * ? & .
+              </p>
+            )}
           </label>
           <label
             className="form-label"
             htmlFor="input-rpt-password"
           >
-            Hasło
+            Powtórz hasło
             <input
               ref={register({
                 required: true,
-                pattern: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
+                pattern: /(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
               })}
               name="rptPassword"
               className="form__input"
@@ -86,6 +101,14 @@ const SignIn = () => {
               type="text"
               onChange={(e) => setRptPassword(e.target.value)}
             />
+             {errors.rptPassword && (
+            <p className="login__tile--message">To pole jest wymagane</p>
+          )}
+          {!pwdEqual && (
+            <p className="login__tile--message">
+              Hasła nie zgadzają się, sprawdź pisownię
+            </p>
+          )}
           </label>
         </div>
         <div className="signIn__buttons">

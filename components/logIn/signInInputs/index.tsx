@@ -5,7 +5,7 @@ import SharedComponents from '../../index'
 const { HeadingItem } = SharedComponents;
 
 const SignIn = () => {
-  const { register, handleSubmit, watch, errors } = useForm()
+  const { register, handleSubmit, errors } = useForm()
   const [ email, setEmail ] = useState('')
   const [ password, setPassword ] = useState('')
   const [ logInData, setLogInData ] = useState({
@@ -21,6 +21,9 @@ const SignIn = () => {
     setEmail('')
     setPassword('')
   }
+
+  console.log(errors);
+  
 
   return (
     <div className="signIn">
@@ -55,7 +58,7 @@ const SignIn = () => {
             <input
               ref={register({
                 required: true,
-                pattern: /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
+                pattern: /(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
               })}
               name="password"
               className="form__input"
