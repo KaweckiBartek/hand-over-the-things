@@ -57,7 +57,7 @@ const ContactUs = () => {
                 <input
                   ref={register({
                     required: true,
-                    pattern: /[a-zA-Z]/
+                    pattern: /^[-a-zA-Z0-9@\.+_]+$/
                   })}
                   name="name"
                   className="form__input"
@@ -67,6 +67,11 @@ const ContactUs = () => {
                   placeholder="Krzysztof"
                   onChange={(e) => setName(e.target.value)}
                 />
+                {errors.name && (
+                  <p className="form-error ">
+                    Podane imię jest nieprawidłowe!
+                  </p>
+                )}
               </label>
 
               <label
@@ -86,6 +91,11 @@ const ContactUs = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   type="text"
                 />
+                {errors.email && (
+                  <p className="form-error ">
+                    Podane email jest nieprawidłowy!
+                  </p>
+                )}
               </label>
             </div>
 
@@ -104,6 +114,11 @@ const ContactUs = () => {
                 placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 onChange={(e) => setMessage(e.target.value)}
               />
+              {errors.message && (
+                  <p className="form-error ">
+                    Wiadomość musi mieć conajmniej 120 znaków!
+                  </p>
+                )}
             </label>
 
             <input type="submit" value="Wyślij" className={`main-button main-button-small`} />
