@@ -45,6 +45,11 @@ const SignIn = () => {
               onChange={(e) => setEmail(e.target.value)}
               type="text"
             />
+            {errors.email && (
+              <p className="form-error ">
+                Podany email jest nieprawidłowy!
+              </p>
+            )}
           </label>
 
           <label
@@ -64,6 +69,11 @@ const SignIn = () => {
               type="text"
               onChange={(e) => setPassword(e.target.value)}
             />
+            {errors.password && (
+              <p className="form-error ">
+                To pole jest wymagane. Upewnij się, że posiada minimum 1 cyfrę, 1 duża literę i małą oraz znak specjalny spośród: @ $ !% * ? & .
+              </p>
+            )}
           </label>
         </div>
         <div className="signIn__buttons">

@@ -57,7 +57,7 @@ const SignIn = () => {
             />
             {errors.email && (
               <p className="form-error ">
-                Podany email jest nieprawidłowy
+                Podany email jest nieprawidłowy!
               </p>
             )}
           </label>
@@ -107,7 +107,7 @@ const SignIn = () => {
           )}
           {!pwdEqual && (
             <p className="form-error">
-              Hasła nie zgadzają się, sprawdź pisownię
+              Hasła nie zgadzają się, sprawdź pisownię!
             </p>
           )}
           </label>
