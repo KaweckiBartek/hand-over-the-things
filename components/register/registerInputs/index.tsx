@@ -17,7 +17,7 @@ const SignIn = () => {
   })
 
   const onSubmit = (data: any) => {
-    if (data.pwd !== data.repeatPwd) {
+    if (data.password !== data.rptPassword) {
       setPwdEqual(false);
       return;
     }
@@ -29,6 +29,7 @@ const SignIn = () => {
     setEmail('')
     setPassword('')
     setRptPassword('')
+    setPwdEqual(true);
   }
 
   return (
@@ -56,7 +57,7 @@ const SignIn = () => {
             />
             {errors.email && (
               <p className="form-error ">
-                Wprowadź poprawny adres email
+                Podany email jest nieprawidłowy
               </p>
             )}
           </label>
@@ -78,7 +79,7 @@ const SignIn = () => {
               type="text"
               onChange={(e) => setPassword(e.target.value)}
             />
-            {errors.email && (
+            {errors.password && (
               <p className="form-error ">
                 To pole jest wymagane. Upewnij się, że posiada minimum 1 cyfrę, 1 duża literę i małą oraz znak specjalny spośród: @ $ !% * ? & .
               </p>
@@ -102,10 +103,10 @@ const SignIn = () => {
               onChange={(e) => setRptPassword(e.target.value)}
             />
              {errors.rptPassword && (
-            <p className="login__tile--message">To pole jest wymagane</p>
+            <p className="form-error">To pole jest wymagane</p>
           )}
           {!pwdEqual && (
-            <p className="login__tile--message">
+            <p className="form-error">
               Hasła nie zgadzają się, sprawdź pisownię
             </p>
           )}
@@ -115,7 +116,8 @@ const SignIn = () => {
           <Link href="/logowanie">
             <p className="main-button main-button-small">Zaloguj się</p>
           </Link>
-          <input type="submit" value="Załóż konto" className="main-button main-button-small" />
+          <input type="submit" value="Załóż konto" className="main-button main-button-small"
+          />
         </div>
       </form>
     </div>

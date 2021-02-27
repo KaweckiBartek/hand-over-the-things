@@ -22,9 +22,6 @@ const SignIn = () => {
     setPassword('')
   }
 
-  console.log(errors);
-  
-
   return (
     <div className="signIn">
       <HeadingItem firstLine="Zaloguj się" secondLine="" />
