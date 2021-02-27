@@ -43,27 +43,27 @@ export const nonGovermentOrganisations = [
     description: `ubrania, jedzenie, sprzęt AGD, meble, zabawki`
   },
   {
-    name: `Fundacja “Dla dzieci”`,
+    name: `nonGovermentOrganisations`,
     mision: `Cel i misja: Pomoc dzieciom z ubogich rodzin.`,
     description: `ubrania, meble, zabawki`
   },
   {
-    name: `Fundacja “Bez domu”`,
+    name: `nonGovermentOrganisations`,
     mision: `Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.`,
     description: `ubrania, jedzenie, ciepłe koce`
   },
   {
-    name: `Fundacja “Bez domu”`,
+    name: `nonGovermentOrganisations`,
     mision: `Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.`,
     description: `ubrania, jedzenie, ciepłe koce`
   },
   {
-    name: `Fundacja “Bez domu”`,
+    name: `nonGovermentOrganisations`,
     mision: `Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.`,
     description: `ubrania, jedzenie, ciepłe koce`
   },
   {
-    name: `Fundacja “Bez domu”`,
+    name: `nonGovermentOrganisations`,
     mision: `Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.`,
     description: `ubrania, jedzenie, ciepłe koce`
   },
@@ -75,12 +75,12 @@ export const localCollections = [
     description: `ubrania, jedzenie, sprzęt AGD, meble, zabawki`
   },
   {
-    name: `Fundacja “Dla dzieci”`,
+    name: `localCollections`,
     mision: `Cel i misja: Pomoc dzieciom z ubogich rodzin.`,
     description: `ubrania, meble, zabawki`
   },
   {
-    name: `Fundacja “Bez domu”`,
+    name: `localCollections`,
     mision: `Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.`,
     description: `ubrania, jedzenie, ciepłe koce`
   },

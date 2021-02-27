@@ -1,3 +1,9 @@
+.contactUs__background{
+  height: 1026px;
+  width: 100%;
+  background: url("/assets/Background-Contact-Form.jpg") no-repeat left/contain;
+  z-index: -1;
+}
 .contactUs {
   height: 1026px;
   width: 100%;
@@ -6,7 +12,7 @@
   justify-content: center;
   align-items: flex-end;
   padding: 20px 100px;
-  background: url('/assets/Background-Contact-Form.jpg') no-repeat left/contain;;
+  background: #FFFFFFC9 0% 0% no-repeat padding-box;
 
   &__form {
     display: flex;
@@ -14,5 +20,25 @@
 
     height: 330px;
     width: 528px;
+
+    .inputs__wrapper {
+      display: flex;
+    }
+
+    .form-label {
+      font: normal normal 600 16px $font-base;
+      letter-spacing: 0px;
+      color: $c-gray;
+    }
+
+    .form__input {
+      font: normal normal normal 18px $font-base;
+      letter-spacing: 0px;
+      color: $c-gray;
+      border: none;
+      padding: 5px; 
+      margin: 10px 0;
+      border-bottom: 1px solid $c-gray;
+    }
   }
 }
