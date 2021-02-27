@@ -1,3 +1,26 @@
+export  const simpleSteps = [
+  {
+    icon: "/assets/Icon-1.svg",
+    title: "Wybierz rzeczy",
+    description: "ubrania, zabawki, sprzęt i inne"
+  },
+  {
+    icon: "/assets/Icon-2.svg",
+    title: "Spakuj je",
+    description: "skorzystaj z worków na śmieci"
+  },
+  {
+    icon: "/assets/Icon-3.svg",
+    title: "Zdecyduj komu chcesz pomóc",
+    description: "wybierz zaufane miejsce"
+  },
+  {
+    icon: "/assets/Icon-4.svg",
+    title: "Zamów kuriera",
+    description: "kurier przyjedzie w dogodnym terminie"
+  },
+]
+
 export const fundations = [
   {
     name: `Fundacja “Dbam o Zdrowie”`,

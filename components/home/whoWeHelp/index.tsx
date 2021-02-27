@@ -12,7 +12,6 @@ const WhoWeHelp = () => {
   const [ start, setStart ] = useState(0);
   const [ end, setEnd ] = useState(3);
   const [ institution, setInstitution ] = useState(fundations)
-  const pagesNumbers = Math.ceil(institution.length / 3)
   const pagesCounters = [];
   const numbersOfPages = Math.ceil(institution.length / 3);
   for (let i = 0; i < numbersOfPages; i++) {
@@ -64,7 +63,7 @@ const WhoWeHelp = () => {
       </section>
       
       <div className="institutions__pages">
-        {pagesCounters}
+        {numbersOfPages > 1 && pagesCounters}
       </div>
     </div>
   )
