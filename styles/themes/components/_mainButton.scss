@@ -7,18 +7,27 @@
   transition: 0.5s;
   &:hover{
     transform: scale(1.05);
+    border: 0.75px solid $c-gray;
   }
 }
 
 .main-button-big{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   width: 310px;
   font: normal normal 300 36px/45px $font-base;
+  
 }
 
 
 .main-button-small{
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 150px;
-  font: normal normal 300 18px/32px $font-base;
+  font: normal normal 300 18px $font-base;
+ 
 }

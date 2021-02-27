@@ -31,26 +31,7 @@
           display: flex;
         }
 
-        .form-label {
-          font: normal normal 600 16px $font-base;
-          letter-spacing: 0px;
-          color: $c-gray;
-        }
-
-        .form__input {
-          font: normal normal normal 18px $font-base;
-          letter-spacing: 0px;
-          color: $c-gray;
-          border: none;
-          padding: 5px;
-          margin: 10px 0;
-          background: transparent;
-          border-bottom: 1px solid $c-gray;
-          &::placeholder{
-            opacity: 0.3;
-            color: $c-light-gray;
-          }
-        }
+        
 
         .form__textarea {
           border: none;
@@ -73,5 +54,26 @@
     .main-button-small{
       align-self: flex-end;
     }
+  }
+}
+
+.form-label {
+  font: normal normal 600 16px $font-base;
+  letter-spacing: 0px;
+  color: $c-gray;
+}
+
+.form__input {
+  font: normal normal normal 18px $font-base;
+  letter-spacing: 0px;
+  color: $c-gray;
+  border: none;
+  padding: 5px;
+  margin: 10px 0;
+  background: transparent;
+  border-bottom: 1px solid $c-gray;
+  &::placeholder{
+    opacity: 0.3;
+    color: $c-light-gray;
   }
 }

@@ -4,7 +4,7 @@ import { IHomeNavItem } from '../../../types';
 
 const HomeNavItem = ({ name, navLink }: IHomeNavItem) => {
 
-  navLink==="Start" ? navLink = "/#Start" : navLink
+  navLink==="Start" ? navLink = "/" : navLink
   navLink==="O co chodzi?" ? navLink = "/#SimpleSteps" : navLink
   navLink==='O nas' ? navLink =  "/#AboutUs" : navLink
   navLink==='Fundacja i organizacje' ? navLink =  "/#Institutions" : navLink
@@ -18,7 +18,7 @@ const HomeNavItem = ({ name, navLink }: IHomeNavItem) => {
   )
 }
 
-const Nav = () => {
+export const Nav = () => {
 
   const navItems = ['Start' ,'O co chodzi?', 'O nas', 'Fundacja i organizacje', 'Kontakt']
 
