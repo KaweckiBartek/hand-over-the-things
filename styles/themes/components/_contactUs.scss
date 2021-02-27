@@ -1,44 +1,77 @@
-.contactUs__background{
+.contactUs__background {
   height: 1026px;
   width: 100%;
   background: url("/assets/Background-Contact-Form.jpg") no-repeat left/cover;
-  z-index: -1;
-}
-.contactUs {
-  height: 1026px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 20px 100px;
-  background: #FFFFFFC9 0% 0% no-repeat padding-box;
 
-  &__form {
+  .contactUs__background-shadow {
+    height: 1026px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
+    background: #ffffffc9 0% 0% no-repeat padding-box;
+    padding: 0 100px;
 
-    height: 330px;
-    width: 528px;
-
-    .inputs__wrapper {
+    .contactUs {
+      height: 1026px;
+      width: 528px;
       display: flex;
-    }
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 100px;
 
-    .form-label {
-      font: normal normal 600 16px $font-base;
-      letter-spacing: 0px;
-      color: $c-gray;
-    }
+      &__form {
+        display: flex;
+        flex-direction: column;
 
-    .form__input {
-      font: normal normal normal 18px $font-base;
-      letter-spacing: 0px;
-      color: $c-gray;
-      border: none;
-      padding: 5px; 
-      margin: 10px 0;
-      border-bottom: 1px solid $c-gray;
+        height: 330px;
+        width: 528px;
+
+        .inputs__wrapper {
+          display: flex;
+        }
+
+        .form-label {
+          font: normal normal 600 16px $font-base;
+          letter-spacing: 0px;
+          color: $c-gray;
+        }
+
+        .form__input {
+          font: normal normal normal 18px $font-base;
+          letter-spacing: 0px;
+          color: $c-gray;
+          border: none;
+          padding: 5px;
+          margin: 10px 0;
+          background: transparent;
+          border-bottom: 1px solid $c-gray;
+          &::placeholder{
+            opacity: 0.3;
+            color: $c-light-gray;
+          }
+        }
+
+        .form__textarea {
+          border: none;
+          height: 100px;
+          width: 100%;
+          margin-bottom: 10px 0 40px 0;
+          font: normal normal normal 18px $font-base;
+          letter-spacing: 0px;
+          color: $c-gray;
+          padding: 5px;
+          background: transparent;
+          border-bottom: 1px solid $c-gray;
+          &::placeholder{
+            opacity: 0.3;
+            color: $c-light-gray;
+          }
+        }
+      }
+    }
+    .main-button-small{
+      align-self: flex-end;
     }
   }
 }
