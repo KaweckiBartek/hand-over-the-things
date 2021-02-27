@@ -7,9 +7,22 @@ const ContactUs = () => {
   const [ name, setName ] = useState('')
   const [ email, setEmail ] = useState('')
   const [ message, setMessage ] = useState('')
+  const [ formData, setFormData ] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setFormData({
+      name,
+      email,
+      message
+    })
+    setName('')
+    setEmail('')
+    setMessage('')
   }
   return (
     <div className="contactUs__background">
