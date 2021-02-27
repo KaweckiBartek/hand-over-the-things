@@ -12,15 +12,18 @@ const SignIn = () => {
   const [ registerData, setLogInData ] = useState({
     email: "",
     password: "",
+    rptPassword: "",
   })
 
   const onSubmit = () => {
     setLogInData({
       email,
-      password
+      password,
+      rptPassword,
     })
     setEmail('')
     setPassword('')
+    setRptPassword('')
   }
 
   return (
