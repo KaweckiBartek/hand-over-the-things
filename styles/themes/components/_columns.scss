@@ -35,3 +35,11 @@
     }
   }
 }
+
+@media only screen and (max-width: 1200px){
+  .home__columns {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 1000px;
+  }
+}

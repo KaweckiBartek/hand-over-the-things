@@ -15,6 +15,7 @@ const Footer = dynamic(()=> import('./home/footer'))
 const SignInInputs = dynamic(()=> import('./logIn/signInInputs'))
 const RegisterInputs = dynamic(()=> import('./register/registerInputs'))
 const LogOutModal = dynamic(()=> import('./logOut/logOutModal'))
+const HamburgerMenu = dynamic(()=> import('./home/hamburgerMenu'))
 
 export const SharedComponents = {
   Nav,
@@ -30,6 +31,7 @@ export const SharedComponents = {
   SignInInputs,
   RegisterInputs,
   LogOutModal,
+  HamburgerMenu
 };
 
 export default SharedComponents;
