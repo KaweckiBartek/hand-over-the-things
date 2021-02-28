@@ -14,6 +14,7 @@ export interface IHelpNavItem {
 export interface IMainButton {
   size: string,
   text: string,
+  href: string,
 }
 
 export interface IColumn{

@@ -23,11 +23,10 @@ const SimpleSteps = () => {
         })}
       </main>
 
-      <Link href="/logowanie">
+      
         <div className="simpleSteps__button">
-          <MainButton text="ODDAJ RZECZY" size="big" />
+          <MainButton text="ODDAJ RZECZY" size="big" href="/logowanie"/>
         </div>
-      </Link>
     </div>
   )
 }

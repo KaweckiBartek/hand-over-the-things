@@ -10,12 +10,8 @@ const Banner = () => {
       <HeadingItem firstLine="Zacznij pomagać!" secondLine="Oddaj niechciane rzeczy w zaufane ręce" />
 
       <div className="banner-buttons">
-        <Link href="/logowanie">
-          <a><MainButton size="big" text="ODDAJ RZECZY" /></a>
-        </Link>
-        <Link href="/logowanie">
-          <a><MainButton size="big" text="ZORGANIZUJ ZBIÓRKĘ" /></a>
-        </Link>
+        <MainButton size="big" text="ODDAJ RZECZY" href="/logowanie"/>
+        <MainButton size="big" text="ZORGANIZUJ ZBIÓRKĘ" href="/logowanie" />
       </div>
     </div>
   )

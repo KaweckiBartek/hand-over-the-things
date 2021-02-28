@@ -34,7 +34,7 @@ const SignIn = () => {
 
   return (
     <div className="signIn">
-      <HeadingItem firstLine="Zaloguj się" secondLine="" />
+      <HeadingItem firstLine="Załóż konto" secondLine="" />
       <form onSubmit={handleSubmit(onSubmit)} className="signIn__form">
         <div className="log-reg-wrapper">
           <label

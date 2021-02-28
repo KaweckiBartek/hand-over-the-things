@@ -10,7 +10,6 @@ const Header = () => {
       </div>
       <div className="header_right">
         <Nav />
-
         <div className="welcome-section-wrapper">
           <Banner />
         </div>

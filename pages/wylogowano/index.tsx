@@ -1,8 +1,9 @@
 import Head from 'next/head'
+import React from 'react'
 import SharedComponents from "../../components"
-const {Nav, SignInInputs, Footer} = SharedComponents
+const {Nav, LogOutModal, Footer} = SharedComponents
 
-export default function SignIn() {
+export default function LogOut() {
   return (
     <div className="layout">
       <Head>
@@ -10,10 +11,11 @@ export default function SignIn() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <SignInInputs />
+      <LogOutModal />
       <footer className="footer__bottom">
         <Footer />
       </footer>
     </div>
   )
 }
+
