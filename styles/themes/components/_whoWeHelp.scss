@@ -6,6 +6,10 @@
   align-items: center;
   align-items: center;
   padding: 70px 178px;
+  ul{
+    margin-left: 0;
+    padding-left: 0;
+  }
 
   &__institutions {
     display: flex;
@@ -122,6 +126,29 @@
       &:focus {
         border: 1px solid #707070;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px){
+  .whoWeHelp {
+    padding: 70px 80px;
+    &__item{
+      font-size: 20px !important;
+    }
+    &__institutions__descriptions{
+      font-size: 20px !important;
+    }
+
+    .institutionItem__left__name{
+      font-size: 25px !important;
+    }
+
+    .institutionItem__left__mision{
+      font-size: 15px !important;
+    }
+    .institutionItem__right__description{
+      font-size: 15px !important;
     }
   }
 }

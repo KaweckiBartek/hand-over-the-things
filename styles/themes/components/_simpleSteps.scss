@@ -48,8 +48,11 @@
 
 @media only screen and (max-width: 1200px){
   .simpleSteps {
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 1000px;
+    height: 1600px;
+
+    &__main{
+      height: 1000px;
+      flex-direction: column;
+    }
   }
 }

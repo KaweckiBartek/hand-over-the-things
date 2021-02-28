@@ -6,9 +6,9 @@
   &__left {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 185px 10px;
+    padding: 0 30px;
     background-color: $c-white;
     width: 50%;
     height: 100%;
@@ -31,5 +31,60 @@
   &__right {
     width: 50%;
     height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .aboutUs {
+    height: 800px;
+
+    .aboutUs__left__signature {
+      margin-left: 300px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .aboutUs {
+    height: 700px;
+
+    &__left {
+      h3 {
+        font-size: 20px;
+      }
+      &__signature {
+        margin-left: 200px;
+        width: 159px;
+        height: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .aboutUs {
+    height: 1400px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    &__left {
+      width: 100%;
+      h3 {
+        font-size: 25px;
+      }
+      &__signature {
+        margin-left: 200px;
+        width: 159px;
+        height: 100px;
+      }
+    }
+    &__right {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .aboutUs__right {
+    height: 70%;
   }
 }
